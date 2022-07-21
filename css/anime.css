@@ -86,7 +86,44 @@ nav ul li a:hover{
 }
 
 /* HEADER END */
+.searching{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
 
+.searching div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.searching div label{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.searching div label input{
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid rgb(202, 202, 202);
+    outline: none;
+    margin: 10px 0;
+    transition: 500ms;
+}
+
+.searching div label input:focus{
+    border-bottom: 2px solid #000
+}
 
 
 /* MEDIA QUERIES */

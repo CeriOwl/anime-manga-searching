@@ -1,8 +1,10 @@
 const API_PATH = "https://kitsu.io/api/edge"
 
-const button = document.getElementById("send-button")
-button.addEventListener("click", () => {
-    getName()
+const content_to_listen = document.getElementById("anime-name")
+content_to_listen.addEventListener("keypress", data => {
+    if(data.key === "Enter"){
+        getName()
+    }
 })
 
 function getName(){
