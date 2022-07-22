@@ -3,6 +3,8 @@
 :root{
     --background-header-color: #000000;
     --background-hover-letters: #B51B3A;
+    --border-not-used: rgb(202, 202, 202);
+
 }
 
 *{
@@ -22,7 +24,7 @@ header{
     flex-wrap: wrap;
 }
 
-figure{
+.figure-header{
     display: flex;
     margin-left: 3rem;
 }
@@ -32,7 +34,7 @@ figure{
     padding: 0.2rem;
 }
 .image-nav:hover{
-    animation: moveIt 2s infinite ease-in-out;
+    animation: moveIt 0.3s infinite ease-in-out;
 }
 
 header figure a{
@@ -66,7 +68,7 @@ nav ul li a{
 
 nav ul li a:hover{
     color: var(--background-hover-letters);
-    background-color: #000;
+    background-color: var(--background-header-color);
 }
 
 @keyframes moveIt{
@@ -86,6 +88,39 @@ nav ul li a:hover{
 }
 
 /* HEADER END */
+
+.searching-on{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    transition: 1000ms;
+}
+
+.searching-on div label{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: semi-bold;
+}
+
+.searching-on div label input{
+    width: 20rem;
+    margin-left: 1rem;
+    height: 1.7rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--border-not-used);
+    font-size: 1.5rem;
+    padding: 15px 2px;
+    transition: 500ms;
+}
+
+.searching-on div label input:focus{
+    border-bottom: 2px solid var(--background-header-color);
+}
+
 .searching{
     display: flex;
     justify-content: center;
@@ -115,20 +150,60 @@ nav ul li a:hover{
     padding: 5px;
     font-size: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0);
-    border-bottom: 2px solid rgb(202, 202, 202);
+    border-bottom: 2px solid ;
     outline: none;
     margin: 10px 0;
     transition: 500ms;
 }
 
 .searching div label input:focus{
-    border-bottom: 2px solid #000
+    border-bottom: 2px solid var(--background-header-color);
 }
 
+
+/* ANIME */
+.anime-search-section{
+    display: flex;
+    border: 1px solid red;
+}
+.anime-search-section figure{
+    padding: 5px;
+    border: 1px solid red;
+}
+.anime-search-section img{
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+}
+
+.anime-section-info{
+    border: 1px solid red;
+}
+
+.anime-search-section h2{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.anime-search-section h3{
+    font-size: 1.8rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.anime-section-info .div-title, .anime-section-info .div-subtitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anime-section-info .anime-synopsis{
+    text-align: justify;
+}
+.anime-section-info .div-data{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
 
 /* MEDIA QUERIES */
-@media (max-width: 500px){
-    figure{
-        display: none;
-    }
-}
