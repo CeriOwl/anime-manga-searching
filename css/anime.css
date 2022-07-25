@@ -1,209 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 
-:root{
-    --background-header-color: #000000;
-    --background-hover-letters: #B51B3A;
-    --border-not-used: rgb(202, 202, 202);
-
+:root {
+  --background-header-color: #000000;
+  --color-letters: #f1f1f1;
+  --background-hover-letters: #b51b3a;
+  --border-not-used: rgb(202, 202, 202);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-header{
-    background-color: var(--background-header-color);
-    display: flex;
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
-    justify-content: space-between;
-    flex-wrap: wrap;
+header {
+  background-color: var(--background-header-color);
+  display: flex;
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 3;
 }
 
-.figure-header{
-    display: flex;
-    margin-left: 3rem;
+.figure-header {
+  display: flex;
+  margin-left: 3rem;
 }
 
-.image-nav{
-    width: 4rem;
-    padding: 0.2rem;
+.image-nav {
+  width: 4rem;
+  padding: 0.2rem;
 }
-.image-nav:hover{
-    animation: moveIt 0.3s infinite ease-in-out;
-}
-
-header figure a{
-    display: flex;
+.image-nav:hover {
+  animation: moveIt 0.3s infinite ease-in-out;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 3rem;
-}	
-
-ul{
-    display: flex;
-    justify-content: space-around;
+header figure a {
+  display: flex;
 }
 
-nav ul li{
-    list-style: none;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 3rem;
 }
 
-nav ul li a{
-    display: block;
-    padding: 10px;
-    margin: 0 10px;
-    color: aliceblue;
-    text-decoration: none;
-    transition: 400ms;
+ul {
+  display: flex;
+  justify-content: space-around;
 }
 
-nav ul li a:hover{
-    color: var(--background-hover-letters);
-    background-color: var(--background-header-color);
+nav ul li {
+  list-style: none;
 }
 
-@keyframes moveIt{
-    0%{
-        transform: rotate(0);
-    }
-    25%{
-        transform: rotate(20deg);
-    }
-    75%{
-        transform: rotate(-20deg);
-    }
-    100%{
-        transform: rotate(0);
-    }
-    
+nav ul li a {
+  display: block;
+  padding: 10px;
+  margin: 0 10px;
+  color: aliceblue;
+  text-decoration: none;
+  transition: 400ms;
+}
+
+nav ul li a:hover {
+  color: var(--background-hover-letters);
+  background-color: var(--background-header-color);
+}
+
+@keyframes moveIt {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /* HEADER END */
 
-.searching-on{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    transition: 1000ms;
+.searching-on {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  transition: 1000ms;
 }
 
-.searching-on div label{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: semi-bold;
+.searching-on div label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: semi-bold;
 }
 
-.searching-on div label input{
-    width: 20rem;
-    margin-left: 1rem;
-    height: 1.7rem;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid var(--border-not-used);
-    font-size: 1.5rem;
-    padding: 15px 2px;
-    transition: 500ms;
+.searching-on div label input {
+  width: 20rem;
+  margin-left: 1rem;
+  height: 1.7rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--border-not-used);
+  font-size: 1.5rem;
+  padding: 15px 2px;
+  transition: 500ms;
 }
 
-.searching-on div label input:focus{
-    border-bottom: 2px solid var(--background-header-color);
+.searching-on div label input:focus {
+  border-bottom: 2px solid var(--background-header-color);
 }
 
-.searching{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+.searching {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
 
-.searching div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
+.searching div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
 }
 
-.searching div label{
-    display: flex;
-    font-size: 3rem;
-    font-weight: bold;
-    flex-direction: column;
+.searching div label {
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  flex-direction: column;
 }
 
-.searching div label input{
-    width: 100%;
-    padding: 5px;
-    font-size: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-bottom: 2px solid ;
-    outline: none;
-    margin: 10px 0;
-    transition: 500ms;
+.searching div label input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 2px solid var(--border-not-used);
+  outline: none;
+  margin: 10px 0;
+  transition: 500ms;
 }
 
-.searching div label input:focus{
-    border-bottom: 2px solid var(--background-header-color);
+.searching div label input:focus {
+  border-bottom: 2px solid var(--background-header-color);
 }
-
 
 /* ANIME */
-.anime-search-section{
-    display: flex;
-    border: 1px solid red;
-}
-.anime-search-section figure{
-    padding: 5px;
-    border: 1px solid red;
-}
-.anime-search-section img{
-    width: 100%;
-    max-width: 380px;
-    height: auto;
+.anime-search-section-off{
+    display: none;
 }
 
-.anime-section-info{
-    border: 1px solid red;
+.anime-search-section {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 0 100px;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 1.6px 1.1px rgba(0, 0, 0, 0.022),
+    0px 3.5px 2.4px rgba(0, 0, 0, 0.031), 0px 6.1px 4.2px rgba(0, 0, 0, 0.039),
+    0px 9.8px 6.6px rgba(0, 0, 0, 0.045), 0px 15.1px 10.2px rgba(0, 0, 0, 0.051),
+    0px 23.5px 16px rgba(0, 0, 0, 0.059), 0px 39px 26.5px rgba(0, 0, 0, 0.068),
+    0px 78px 53px rgba(0, 0, 0, 0.09);
 }
 
-.anime-search-section h2{
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
-.anime-search-section h3{
-    font-size: 1.8rem;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
-.anime-section-info .div-title, .anime-section-info .div-subtitle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.anime-search-section::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.664);
 }
 
-.anime-section-info .anime-synopsis{
-    text-align: justify;
+.anime-search-section figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  z-index: 2;
 }
-.anime-section-info .div-data{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+.anime-search-section img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.anime-section-info {
+  color: var(--color-letters);
+  z-index: 2;
+}
+
+.anime-search-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0;
+}
+.anime-search-section h3 {
+  font-size: 1.8rem;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.anime-section-info .div-title,
+.anime-section-info .div-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anime-section-info .anime-synopsis {
+  text-align: justify;
+}
+
+.anime-synopsis {
+  padding: 20px 40px;
+}
+
+.anime-section-info .div-data {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.div-data {
+  margin-bottom: 20px;
+}
+
+.anime-show-type,
+.anime-status {
+  word-wrap: break-word;
+  text-transform: capitalize;
 }
 
 /* MEDIA QUERIES */

@@ -48,6 +48,11 @@ function clean_section_anime(anime_section){
 }
 
 function create_elements(data, anime_section){
+
+    anime_section.className = "anime-search-section"
+
+    anime_section.style.backgroundImage = `url(${data.data[0].attributes.coverImage.original})`
+
     let anime_section_info = document.createElement("section")
     anime_section_info.className = "anime-section-info"
 
@@ -90,12 +95,14 @@ function create_elements(data, anime_section){
     anime_end_date.innerHTML = `End date: ${data.data[0].attributes.endDate}`
     
     let anime_show_type = document.createElement("p")
+    anime_show_type.className = "anime-show-type"
     anime_show_type.innerHTML = `Show Type: ${data.data[0].attributes.showType}`
     
     let anime_nsfw = document.createElement("p")
     anime_nsfw.innerHTML = `NSFW: ${nsfw_anime_status(data)}`
     
     let anime_status = document.createElement("p")
+    anime_status.className = "anime-status"
     anime_status.innerHTML = `Status: ${data.data[0].attributes.status}`
 
     // anime section
