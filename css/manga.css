@@ -160,11 +160,11 @@ nav ul li a:hover {
 }
 
 /* ANIME */
-.anime-search-section-off{
+.manga-search-section-off{
     display: none;
 }
 
-.anime-search-section {
+.manga-search-section {
   display: grid;
   grid-template-columns: 40% 60%;
   margin: 0 100px;
@@ -181,7 +181,7 @@ nav ul li a:hover {
     0px 78px 53px rgba(0, 0, 0, 0.09);
 }
 
-.anime-search-section::before {
+.manga-search-section::before {
   position: absolute;
   content: "";
   top: 0px;
@@ -191,52 +191,52 @@ nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-.anime-search-section figure {
+.manga-search-section figure {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
   z-index: 2;
 }
-.anime-search-section img {
+.manga-search-section img {
   width: 100%;
   max-width: 380px;
   height: auto;
   border-radius: 5px;
 }
 
-.anime-section-info {
+.manga-section-info {
   color: var(--color-letters);
   z-index: 2;
 }
 
-.anime-search-section h2 {
+.manga-search-section h2 {
   font-size: 3rem;
   font-weight: bold;
   margin-top: 10px;
   padding: 0;
 }
-.anime-search-section h3 {
+.manga-search-section h3 {
   font-size: 1.8rem;
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.anime-section-info .div-title,
-.anime-section-info .div-subtitle {
+.manga-section-info .div-title,
+.manga-section-info .div-subtitle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.anime-section-info .anime-synopsis {
+.manga-section-info .manga-synopsis {
   text-align: justify;
 }
 
-.anime-synopsis {
+.manga-synopsis {
   padding: 20px 40px;
 }
 
-.anime-section-info .div-data {
+.manga-section-info .div-data {
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
@@ -247,16 +247,17 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.anime-show-type,
-.anime-status {
+.manga-show-type,
+.manga-status {
   word-wrap: break-word;
   text-transform: capitalize;
+  text-align: center;
 }
 
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
-  .anime-search-section {
+  .manga-search-section {
     grid-template-columns: 1fr;
   }
 
@@ -326,7 +327,7 @@ nav ul li a:hover {
     margin: 0;
   }
 
-  .anime-search-section{
+  .manga-search-section{
     grid-template-columns: 100%;
     margin: 0 10px;
   }
@@ -340,11 +341,11 @@ nav ul li a:hover {
     font-size: 1.5rem;
   }
 
-  .anime-synopsis {
+  .manga-synopsis {
     padding: 10px 0;
   }
 
-  .anime-section-info .div-data{
+  .manga-section-info .div-data{
     grid-template-columns: 1fr;
     margin: 20px 0;
     gap: 15px;

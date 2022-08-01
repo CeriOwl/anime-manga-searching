@@ -8,6 +8,17 @@ content_to_listen.addEventListener("keypress", data => {
     }
 })
 
+const button_menu = document.getElementById("menu-icon")
+button_menu.addEventListener("click", () => {
+    const menu = document.getElementById("menu-to-displayed")
+    if(menu.className === "menu-displayed"){
+        menu.className = "menu-not-displayed"
+    }else{
+        menu.className = "menu-displayed"   
+    }
+    
+})
+
 function resizeInput(){
     let input_anime = document.getElementById("search-anime")
     console.log(input_anime.className = "searching-on")
@@ -83,34 +94,33 @@ function create_elements(data, anime_section){
     div_data.className = "div-data"
 
     let anime_total_episodes = document.createElement("p")
-    anime_total_episodes.innerHTML = `Total Episodes: ${data.data[0].attributes.episodeCount}`
+    anime_total_episodes.innerHTML = `<strong>Total Episodes: </strong>${data.data[0].attributes.episodeCount}`
     
     let anime_total_duration = document.createElement("p")
-    anime_total_duration.innerHTML = `Episode Duration: ${data.data[0].attributes.episodeLength} min`
+    anime_total_duration.innerHTML = `<strong>Episode Duration: </strong>${data.data[0].attributes.episodeLength} min`
     
     let anime_start_date = document.createElement("p")
-    anime_start_date.innerHTML = `Start date: ${data.data[0].attributes.startDate}`
+    anime_start_date.innerHTML = `<strong>Start date: </strong>${data.data[0].attributes.startDate}`
     
     let anime_end_date = document.createElement("p")
-    anime_end_date.innerHTML = `End date: ${data.data[0].attributes.endDate}`
+    anime_end_date.innerHTML = `<strong>End date: </strong>${data.data[0].attributes.endDate}`
     
     let anime_show_type = document.createElement("p")
     anime_show_type.className = "anime-show-type"
-    anime_show_type.innerHTML = `Show Type: ${data.data[0].attributes.showType}`
+    anime_show_type.innerHTML = `<strong>Show Type: </strong>${data.data[0].attributes.showType}`
     
     let anime_nsfw = document.createElement("p")
-    anime_nsfw.innerHTML = `NSFW: ${nsfw_anime_status(data)}`
+    anime_nsfw.innerHTML = `<strong>NSFW: </strong>${nsfw_anime_status(data)}`
     
     let anime_status = document.createElement("p")
     anime_status.className = "anime-status"
-    anime_status.innerHTML = `Status: ${data.data[0].attributes.status}`
+    anime_status.innerHTML = `<strong>Status: </strong>${data.data[0].attributes.status}`
 
     // anime section
     //     container img
     //     anime_section_info
     anime_section.appendChild(container_img)
     container_img.appendChild(anime_image)
-
     anime_section.appendChild(anime_section_info)
     anime_section_info.appendChild(div_title)
     div_title.appendChild(anime_title)
