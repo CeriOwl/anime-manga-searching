@@ -124,7 +124,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: calc(93vh - 64px);
 }
 
 .searching div {
@@ -272,7 +272,7 @@ nav ul li a:hover {
     background-color: #b51b3a;
     top: 100%;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 64px);
   }
 
   .menu-displayed ul{

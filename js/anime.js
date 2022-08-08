@@ -16,7 +16,6 @@ button_menu.addEventListener("click", () => {
     }else{
         menu.className = "menu-displayed"   
     }
-    
 })
 
 function resizeInput(){

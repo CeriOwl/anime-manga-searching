@@ -1,8 +1,12 @@
+/* Montserrat & Noto Sans JP */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root{
     --background-header-color: #000000;
     --background-hover-letters: #B51B3A;
+    --background-main-sections: #7C0000;
 }
 
 *{
@@ -86,3 +90,46 @@ nav ul li a:hover{
 }
 
 /* HEADER END */
+
+/* MAIN */
+.img > img{
+    width: 30px;
+}
+.first-info-section{
+    background-color: var(--background-main-sections);
+    font-family: "Roboto", sans-serif;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.img-background{
+    opacity: 10%;
+    position: absolute;
+    z-index: 0;
+}
+
+.first-info-section > .text{
+    width: 800px;
+}
+
+.first-info-section h2{
+    font-size: 7rem;
+    z-index: 1;
+}
+
+.first-info-section > .img{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.first-info-section img{
+    width: 100%;
+}
