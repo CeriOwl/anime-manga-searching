@@ -6,7 +6,8 @@
 :root{
     --background-header-color: #000000;
     --background-hover-letters: #B51B3A;
-    --background-main-sections: #7C0000;
+    --background-main-sections: #7c0000da;
+    --background-buttons: #fafafa;
 }
 
 *{
@@ -19,9 +20,6 @@
 header{
     background-color: var(--background-header-color);
     display: flex;
-    top: 0;
-    position: -webkit-sticky;
-    position: sticky;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -92,11 +90,10 @@ nav ul li a:hover{
 /* HEADER END */
 
 /* MAIN */
-.img > img{
-    width: 30px;
-}
-.first-info-section{
-    background-color: var(--background-main-sections);
+.first-info-section, .second-info-section{
+    background-image: url("../img/nofavicon/first-anime-pattern.webp");
+    background-size: 70%;
+    background-position: 20px;
     font-family: "Roboto", sans-serif;
     color: #f2f2f2;
     display: flex;
@@ -104,32 +101,188 @@ nav ul li a:hover{
     justify-content: center;
     height: calc(100vh - 64px);
     position: relative;
-    overflow: hidden;
-    z-index: 0;
 }
 
-.img-background{
-    opacity: 10%;
+.second-info-section{
+    background-image: url("../img/nofavicon/second-manga-pattern.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 105%;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.first-info-section::before, .second-info-section::before{
     position: absolute;
-    z-index: 0;
+    content: "";
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: var(--background-main-sections);
 }
 
-.first-info-section > .text{
+.first-info-section > .text, .second-info-section > .text{
     width: 800px;
+    z-index: 2;
 }
 
 .first-info-section h2{
     font-size: 7rem;
-    z-index: 1;
 }
 
-.first-info-section > .img{
+.second-info-section h2{
+    font-size: 6.2rem;
+    text-align: right;
+}	
+
+.first-info-section > .img, .second-info-section > .img{
     width: 450px;
     height: 450px;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 2;
 }
 
-.first-info-section img{
+.first-info-section img , .second-info-section img{
     width: 100%;
+}
+
+.anime-manga-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.anime-manga-buttons > .button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid rgb(77, 77, 77);
+    margin: 50px 30px;
+    padding: 10px;
+    background-color: var(--background-buttons);
+    border-radius: 5px;
+}
+
+.anime-manga-buttons > .button > img{
+    width: 150px;
+}
+
+.anime-manga-buttons > .button > a{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.anime-manga-buttons > .button > a:hover{
+    color: var(--background-hover-letters);
+}
+
+.banner-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    text-align: center;
+}
+
+.banner-section h2{
+    font-size: 40px;
+}
+
+/* MAIN END */
+
+/* FOOTER */
+footer{
+    background-color: var(--background-header-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+    color: #f2f2f2;
+    height: 300px;
+}
+
+footer > section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer > .credits > ul{
+    display: flex;
+    flex-direction: column;
+}
+footer > .credits > ul > li{
+    list-style: circle;
+    margin: 8px 0;
+}
+
+footer > .credits > ul > li > a{
+    color: #f2f2f2;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 500ms ease-out;
+}
+
+footer > .credits > ul > li > a:hover{
+    border-bottom: 1px solid #f2f2f2;
+}
+
+footer .titles{
+    font-size: 4rem;
+}
+
+footer .social-media > ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+
+footer .social-media > ul > li{
+    list-style: none;
+}
+
+footer .social-media > ul > li > a > img{
+    width: 70px;
+    transition: 500ms;
+}
+
+footer .social-media > ul > li > a:hover img{
+    transform: scale(1.1);
+}
+
+/* FOOTER END */
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px){
+    .first-info-section h2{
+        font-size: 5.5rem;
+    }
+    .first-info-section > .text, .second-info-section > .text{
+        width: 530px;
+    }
+    .first-info-section > .img, .second-info-section > .img{
+        width: 400px;
+        height: 400px;
+    }
+    .first-info-section{
+        background-size: 91%;
+    }
+    .anime-manga-buttons > .button > a{
+        text-align: center;
+    }
+    .second-info-section h2{
+        font-size: 4.6rem;
+    }
+    .banner-section h2{
+        font-size: 34px;
+    }
+    footer .titles{
+        font-size: 3rem;
+    }
 }
