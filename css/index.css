@@ -1,63 +1,69 @@
 /* Montserrat & Noto Sans JP */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap");
 /* Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
-:root{
+:root {
     --background-header-color: #000000;
-    --background-hover-letters: #B51B3A;
+    --background-hover-letters: #b51b3a;
     --background-main-sections: #7c0000da;
     --background-buttons: #fafafa;
+    --color-letters: #f1f1f1;
+    --border-not-used: rgb(202, 202, 202);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-header{
+header {
     background-color: var(--background-header-color);
     display: flex;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
     justify-content: space-between;
-    flex-wrap: wrap;
+    z-index: 3;
 }
 
-figure{
+.figure-header {
     display: flex;
     margin-left: 3rem;
 }
 
-.image-nav{
+.image-nav {
     width: 4rem;
     padding: 0.2rem;
 }
-.image-nav:hover{
-    animation: moveIt 2s infinite ease-in-out;
+
+.image-nav:hover {
+    animation: moveIt 0.3s infinite ease-in-out;
 }
 
-header figure a{
+header figure a {
     display: flex;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 3rem;
-}	
+}
 
-ul{
+ul {
     display: flex;
     justify-content: space-around;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     display: block;
     padding: 10px;
     margin: 0 10px;
@@ -66,31 +72,34 @@ nav ul li a{
     transition: 400ms;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: var(--background-hover-letters);
-    background-color: #000;
+    background-color: var(--background-header-color);
 }
 
-@keyframes moveIt{
-    0%{
+@keyframes moveIt {
+    0% {
         transform: rotate(0);
     }
-    25%{
+
+    25% {
         transform: rotate(20deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-20deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0);
     }
-    
 }
 
 /* HEADER END */
 
 /* MAIN */
-.first-info-section, .second-info-section{
+.first-info-section,
+.second-info-section {
     background-image: url("../img/nofavicon/first-anime-pattern.webp");
     background-size: 70%;
     background-position: 20px;
@@ -103,7 +112,7 @@ nav ul li a:hover{
     position: relative;
 }
 
-.second-info-section{
+.second-info-section {
     background-image: url("../img/nofavicon/second-manga-pattern.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -112,7 +121,8 @@ nav ul li a:hover{
     justify-content: space-around;
 }
 
-.first-info-section::before, .second-info-section::before{
+.first-info-section::before,
+.second-info-section::before {
     position: absolute;
     content: "";
     top: 0px;
@@ -122,21 +132,23 @@ nav ul li a:hover{
     background-color: var(--background-main-sections);
 }
 
-.first-info-section > .text, .second-info-section > .text{
+.first-info-section>.text,
+.second-info-section>.text {
     width: 800px;
     z-index: 2;
 }
 
-.first-info-section h2{
+.first-info-section h2 {
     font-size: 7rem;
 }
 
-.second-info-section h2{
+.second-info-section h2 {
     font-size: 6.2rem;
     text-align: right;
-}	
+}
 
-.first-info-section > .img, .second-info-section > .img{
+.first-info-section>.img,
+.second-info-section>.img {
     width: 450px;
     height: 450px;
     border-radius: 50%;
@@ -144,16 +156,17 @@ nav ul li a:hover{
     z-index: 2;
 }
 
-.first-info-section img , .second-info-section img{
+.first-info-section img,
+.second-info-section img {
     width: 100%;
 }
 
-.anime-manga-buttons{
+.anime-manga-buttons {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.anime-manga-buttons > .button{
+.anime-manga-buttons>.button {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -164,11 +177,11 @@ nav ul li a:hover{
     border-radius: 5px;
 }
 
-.anime-manga-buttons > .button > img{
+.anime-manga-buttons>.button>img {
     width: 150px;
 }
 
-.anime-manga-buttons > .button > a{
+.anime-manga-buttons>.button>a {
     font-size: 1.6rem;
     font-weight: bold;
     color: rgb(22, 22, 22);
@@ -176,26 +189,27 @@ nav ul li a:hover{
     transition: 500ms;
 }
 
-.anime-manga-buttons > .button > a:hover{
+.anime-manga-buttons>.button>a:hover {
     color: var(--background-hover-letters);
 }
 
-.banner-section{
+.banner-section {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 200px;
     text-align: center;
+    padding: 20px;
 }
 
-.banner-section h2{
+.banner-section h2 {
     font-size: 40px;
 }
 
 /* MAIN END */
 
 /* FOOTER */
-footer{
+footer {
     background-color: var(--background-header-color);
     display: flex;
     justify-content: space-evenly;
@@ -205,53 +219,54 @@ footer{
     height: 300px;
 }
 
-footer > section{
+footer>section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer > .credits > ul{
+footer>.credits>ul {
     display: flex;
     flex-direction: column;
 }
-footer > .credits > ul > li{
+
+footer>.credits>ul>li {
     list-style: circle;
     margin: 8px 0;
 }
 
-footer > .credits > ul > li > a{
+footer>.credits>ul>li>a {
     color: #f2f2f2;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 500ms ease-out;
 }
 
-footer > .credits > ul > li > a:hover{
+footer>.credits>ul>li>a:hover {
     border-bottom: 1px solid #f2f2f2;
 }
 
-footer .titles{
+footer .titles {
     font-size: 4rem;
 }
 
-footer .social-media > ul{
+footer .social-media>ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     padding: 10px 0;
 }
 
-footer .social-media > ul > li{
+footer .social-media>ul>li {
     list-style: none;
 }
 
-footer .social-media > ul > li > a > img{
+footer .social-media>ul>li>a>img {
     width: 70px;
     transition: 500ms;
 }
 
-footer .social-media > ul > li > a:hover img{
+footer .social-media>ul>li>a:hover img {
     transform: scale(1.1);
 }
 
@@ -259,30 +274,208 @@ footer .social-media > ul > li > a:hover img{
 
 /* Media Queries */
 
-@media screen and (max-width: 1024px){
-    .first-info-section h2{
+@media screen and (max-width: 1024px) {
+    .first-info-section h2 {
         font-size: 5.5rem;
     }
-    .first-info-section > .text, .second-info-section > .text{
+
+    .first-info-section>.text,
+    .second-info-section>.text {
         width: 530px;
     }
-    .first-info-section > .img, .second-info-section > .img{
+
+    .first-info-section>.img,
+    .second-info-section>.img {
         width: 400px;
         height: 400px;
     }
-    .first-info-section{
+
+    .first-info-section {
         background-size: 91%;
     }
-    .anime-manga-buttons > .button > a{
+
+    .anime-manga-buttons>.button>a {
         text-align: center;
     }
-    .second-info-section h2{
+
+    .second-info-section h2 {
         font-size: 4.6rem;
     }
-    .banner-section h2{
+
+    .banner-section h2 {
         font-size: 34px;
     }
-    footer .titles{
+
+    footer .titles {
         font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .first-info-section h2 {
+        font-size: 4.5rem;
+    }
+
+    .first-info-section>.text,
+    .second-info-section>.text {
+        width: 440px;
+    }
+
+    .first-info-section>.img,
+    .second-info-section>.img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .second-info-section h2 {
+        font-size: 3.4rem;
+    }
+
+    .banner-section h2 {
+        font-size: 29px;
+    }
+
+    footer .titles {
+        font-size: 2.5rem;
+    }
+
+    footer>.credits>ul {
+        font-size: 15px;
+    }
+
+    footer .social-media>ul>li>a>img {
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    /*
+        MENU HEADER
+    */
+    .menu-displayed {
+        display: block;
+        position: absolute;
+        background-color: #b51b3a;
+        top: 100%;
+        width: 100vw;
+        height: calc(100vh - 64px);
+    }
+
+    .menu-displayed ul {
+        margin: 40px 0 0 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-displayed ul li {
+        padding: 10px 0;
+    }
+
+    .menu-displayed ul li a {
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .menu-not-displayed {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        color: #f1f1f1;
+        font-size: 2.5rem;
+        margin-right: 3rem;
+    }
+
+    /*
+        LITERALY THE OTHER THINGS
+    */
+    .first-info-section,
+    .second-info-section {
+        flex-direction: column;
+    }
+
+    .first-info-section h2 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .first-info-section {
+        background-size: 161%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .first-info-section>.img,
+    .second-info-section>.img {
+        width: 240px;
+        height: 240px;
+        margin-top: 30px;
+    }
+
+    .anime-manga-buttons {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .first-info-section>.text,
+    .second-info-section>.text {
+        width: 100%;
+    }
+
+    .second-info-section {
+        justify-content: center;
+    }
+
+    .second-info-section h2 {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+
+    .second-info-section {
+        background-size: 166%;
+    }
+
+    .banner-section h2 {
+        font-size: 22px;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 400px;
+    }
+
+    footer>.credits>ul {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .first-info-section h2{
+        font-size: 2.5rem;
+    }
+    .first-info-section{
+        background-size: 214%;
+    }
+    .anime-manga-buttons>.button>img{
+        width: 100px;
+    }
+    .anime-manga-buttons>.button{
+        margin: 40px 30px;
+    }
+    .second-info-section h2{
+        font-size: 1.7rem;
+    }
+    .second-info-section{
+        background-size: 217%;
+    }
+    footer>.credits>ul{
+        font-size: 10px;
+    }
+    footer .social-media>ul>li>a>img{
+        width: 45px;
     }
 }
